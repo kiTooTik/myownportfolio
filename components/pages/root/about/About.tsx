@@ -32,7 +32,7 @@ const About = () => {
                           draggable='false'
                           src={images.profile.profile}
                           alt='Profile'
-                          title='Vince David'
+                          title='Mark Luis Salazar'
                           width={500}
                           height={500}
                           className='select-none w-full h-full object-cover'

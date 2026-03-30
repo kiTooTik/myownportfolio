@@ -4,7 +4,6 @@ import About from '../about/About'
 import Projects from '../projects/Projects'
 import Skills from '../skills/Skills'
 import RandomQuote from '../quote/RandomQuote'
-import { Contact } from '../contact/Contact'
 
 
 const Content = () => {
@@ -16,9 +15,6 @@ const Content = () => {
           <Projects/>
           <Skills/>
           <RandomQuote/>
-          <div className="flex justify-center pt-10 pb-4">
-            <Contact/>
-          </div>
         </div>
   )
 }
