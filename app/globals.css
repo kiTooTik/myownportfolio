@@ -1,0 +1,278 @@
+@import "tailwindcss";
+
+html {
+  user-select: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Scroll color */
+/* global.css or inside a <style> block */
+
+/* FONT */
+.teko {
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* text shadow */
+/* If you're adding this to your global CSS */
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.text-effect {
+  animation: lightSpeedInLeft 1s ;
+  word-spacing: -500px; /* closer words */
+  text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.text-effect:hover {
+  text-shadow: 8px 8px 8px #212f57;
+}
+
+
+
+
+
+/* globals.css */
+.transparent-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.transparent-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* Transparent track */
+}
+
+.transparent-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2); /* Light semi-transparent thumb */
+  border-radius: 10px;
+}
+
+.transparent-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent; /* For Firefox */
+}
+
+
+
+.matrix-body{
+  background: #030712;
+  overflow: hidden;
+  margin: 0;
+  height: 100vh;
+}
+.matrix-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 2; /* Ensure it stays above the rain effect */
+}
+
+
+.matrix-text {
+  color: white;
+  font-size: 150px;
+  font-family: monospace;
+  position: relative;
+  text-shadow: 0 0 10px gray, 0 0 20px rgb(31, 30, 30), 0 0 30px rgb(121, 122, 121);
+  z-index: 2; /* Ensure it stays above the rain effect */
+}
+
+.matrix-text::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: glitch 2s infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  transform: translate(-2px, -2px);
+  color: #e8e8ea;
+  text-shadow: 0 0 5px rgb(39, 39, 39), 0 0 15px rgb(44, 44, 44);
+}
+
+.rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(44, 44, 44, 0.1) 0,
+    rgba(44, 44, 44, 0.1) 2px,
+    transparent 4px
+  );
+  animation: rain 10s linear infinite;
+  z-index: 1; /* Place it behind the text */
+}
+
+/* Animation for the rain effect */
+@keyframes rain {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Glitch effect for the text */
+@keyframes glitch {
+  0%, 100% {
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+    transform: translate(0);
+  }
+  33% {
+    clip-path: polygon(0 0, 100% 0, 100% 15%, 0 15%);
+    transform: translate(-5px, -5px);
+  }
+  66% {
+    clip-path: polygon(0 85%, 100% 85%, 100% 100%, 0 100%);
+    transform: translate(5px, 5px);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .matrix-text {
+    font-size: 90px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .matrix-text {
+    font-size: 60px;
+  }
+}
+
+
+/* LOADING SPINNER */
+
+
+/* .lds-ring,
+.lds-ring div {
+  box-sizing: border-box;
+}
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  margin: 8px;
+  border: 8px solid currentColor;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: currentColor transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-custom {
+  animation: spin 1s linear infinite;
+}
+
+
+
+.projects-section {
+  background-color: #030712; 
+  min-height: 100vh;
+  overflow-x: auto;
+  padding: 5rem 1rem;
+}
+
+/* Custom dark scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+.projects-section::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects-section::-webkit-scrollbar-track {
+  background: #2d2d2d;
+}
+
+.projects-section::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 8px;
+}
+
+/* Optional: Scrollbar on hover only */
+.projects-section:hover::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+/* Firefox scrollbar (limited styling support) */
+.projects-section {
+  scrollbar-width: thin;
+  scrollbar-color: #555 #2d2d2d;
+}
+
+
+
+  
+
