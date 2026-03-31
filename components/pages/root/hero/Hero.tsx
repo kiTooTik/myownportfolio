@@ -5,7 +5,7 @@ import { TextGenerateEffect } from '@/components/ui/texteffect/TextEffect';
 import { motion } from 'framer-motion';
 import { BackgroundBeams } from '@/components/ui/backgroundbeams/Background-Beams';
 
-const text = "f r o n t - e n d"
+const text = "f u l l  - s t a c k"
 const text2 = "d e v e l o p e r"
 const Hero = () => {
   return (
