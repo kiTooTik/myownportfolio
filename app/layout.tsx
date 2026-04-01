@@ -13,23 +13,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vince | Frontend Developer | Creating User-Friendly Websites", // Global title
+  title: "Mark | Full-Stack Developer | Creating User-Friendly Websites", // Global title
   description:
-    "Welcome to my portfolio! I'm Vince, a passionate frontend developer specializing in creating responsive, accessible, and interactive web applications.",
+    "Welcome to my portfolio! I'm Mark, a passionate frontend developer specializing in creating responsive, accessible, and interactive web applications.",
   openGraph: {
     type:"website",
-    title: "Vince | Frontend Developer | Creating User-Friendly Websites",
+    title: "Mark | Full-Stack Developer | Creating User-Friendly Websites",
     description:
-      "Welcome to my portfolio! I'm Vince, a passionate frontend developer specializing in creating responsive, accessible, and interactive web applications.",
+      "Welcome to my portfolio! I'm Mark, a passionate full-stack developer specializing in creating responsive, accessible, and interactive web applications.",
     images: [
       {
-        url: "https://portfolio-one-delta-35.vercel.app", // Example Open Graph image
+        url: "https://salazarportfolio.vercel.app", // Example Open Graph image
         width: 1200,
         height: 630,
-        alt: "Vince's Portfolio",
+        alt: "Mark's Portfolio",
       },
     ],
-    url: "https://portfolio-one-delta-35.vercel.app",
+    url: "https://salazarportfolio.vercel.app",
   },
   robots: {
     index: true,
@@ -64,17 +64,17 @@ export default function RootLayout({
     __html: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Person",
-      name: "Vince",
-      url: "https://portfolio-one-delta-35.vercel.app",
-      image: "https://portfolio-one-delta-35.vercel.app/seo.png",
+      name: "Mark",
+      url: "https://salazarportfolio.vercel.app",
+      image: "https://salazarportfolio.vercel.app/seo.png",
       jobTitle: "Frontend Developer",
       worksFor: {
         "@type": "Organization",
         name: "Freelance",
       },
       sameAs: [
-        "https://github.com/Amon-mamon",
-        "https://www.linkedin.com/in/vince-stephen-david-ab72292a0/",
+        "https://github.com/kiTooTik",
+        "https://www.linkedin.com/in/mark-luis-salazar-016aa03b5/",
         // Add other social links here
       ],
     }),
